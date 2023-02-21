@@ -1,4 +1,4 @@
-const TeamGenerator = team => {
+const teamGenerator = team => {
 
   // The html for manager
   const generateForManager = manager => {
@@ -62,6 +62,7 @@ const TeamGenerator = team => {
   html.push(team
       .filter(employee => employee.getRole() === "Manager")
       .map(manager => generateForManager(manager))
+      .join("")
   );
   html.push(team
       .filter(employee => employee.getRole() === "Engineer")
@@ -105,7 +106,7 @@ module.exports = team => {
   <div class="container">
       <div class="row">
           <div class="row team-area col-12 d-flex justify-content-center">
-              ${TeamGenerator(team)}
+              ${teamGenerator(team)}
           </div>
       </div>
   </div>

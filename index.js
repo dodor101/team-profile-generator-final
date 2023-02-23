@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 const outputDir = path.resolve(__dirname, 'dist');
-outputPath = path.join(outputDir, 'index.html');
+const outputPath = path.join(outputDir, 'index.html');
 const teamGenerator = require('./src/generateTeamTemp.js');
 
 
@@ -25,7 +25,7 @@ function App() {
         case "Manager":
           addManager();
           break;
-        case "Ingineer":
+        case "Engineer":
           addEngineer();
           break;
         case "Intern":
@@ -135,7 +135,7 @@ function App() {
       {
         type: "input",
         name: "engineerEmail",
-        message: "What is the engineer's email address?", 
+        message: "What is the engineer's email address?",
         validate: input => {
           if (input) {
             return true;
@@ -160,11 +160,11 @@ function App() {
 
     ]).then(answers => {
       const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
-      teamArrayData.push(engineer);
+      teamArrayData.push(engineer)
       makeTeam();
     });
 
-  };
+  }
   // intern prompt
   function addIntern() {
     inquirer.prompt([
@@ -227,7 +227,7 @@ function App() {
       makeTeam();
     });
 
-  };
+  }
 
 
   function htmlBuilder() {

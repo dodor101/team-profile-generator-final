@@ -23,7 +23,7 @@ const teamGenerator = team => {
   const generateForEngineer = engineer => {
       return `
 <div class="card employee-card">
-  <div class="card-header bg-success text-white">
+  <div class="card-header bg-info text-white">
       <h2 class="card-title">${engineer.getName()}</h2>
       <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
   </div>

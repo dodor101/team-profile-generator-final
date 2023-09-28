@@ -1,6 +1,6 @@
 const Intern = require('../lib/intern');
 
-describe('engineer', function () {
+describe('Engineer', function () {
   describe('Initialization', function () {
     it('Can create a school', () => {
       const testSchool = 'School name'

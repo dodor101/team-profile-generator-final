@@ -1,6 +1,6 @@
 const Manager = require('../lib/manager');
 
-describe('manager', function () {
+describe('Manager', function () {
   describe('Initialization', function () {
     it('Can create an office number', () => {
       const testOfficeNumber = 2
